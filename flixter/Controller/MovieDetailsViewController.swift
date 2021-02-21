@@ -50,7 +50,8 @@ class MovieDetailsViewController: UIViewController {
         titleLabel.sizeToFit()
         sypnosisLabel.text = movie["overview"] as? String ?? ""
         sypnosisLabel.sizeToFit()
-        //ratingLabel.text = "\(movie["vote_average"] as? Int ?? 0)"
+        
+        ratingLabel.text = movie["release_date"] as? String ?? ""
         
         // Get images [poster]
         let baseUrl = "https://image.tmdb.org/t/p/w185"
@@ -62,7 +63,5 @@ class MovieDetailsViewController: UIViewController {
         let backdropPath = movie["backdrop_path"] as? String ?? ""
         let backdropUrl = URL(string: "https://image.tmdb.org/t/p/w780" + posterPath)!
         backDropView.af.setImage(withURL: backdropUrl)
-        
-        //getVideosKey(id: movie["id"] as? String ?? "")
     }
 }

@@ -12,6 +12,7 @@ class VideoViewController: UIViewController, WKUIDelegate {
     var movieId: Int!
     var webView: WKWebView!
     var key: [[String:Any]]!
+    
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
@@ -23,9 +24,6 @@ class VideoViewController: UIViewController, WKUIDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         getAPIData()
-        let myURL = URL(string:"https://www.youtube.com/watch?v=\(key)")
-        let myRequest = URLRequest(url: myURL!)
-        webView.load(myRequest)
     }
     
     func getAPIData() {
@@ -35,12 +33,13 @@ class VideoViewController: UIViewController, WKUIDelegate {
                 return
             }
             self.key = videos
-            let video = self.key.first!
-            let videoKey = video["key"] as! String
+            let video = self.key.first
+            let videoKey = video?["key"] as! String
             let myURL = URL(string:"https://www.youtube.com/watch?v=\(videoKey)")
             let myRequest = URLRequest(url: myURL!)
             self.webView.load(myRequest)
             print(videoKey)
         }
     }
+    
 }
