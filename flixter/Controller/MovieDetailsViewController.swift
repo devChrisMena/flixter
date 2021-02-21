@@ -50,8 +50,8 @@ class MovieDetailsViewController: UIViewController {
         titleLabel.sizeToFit()
         sypnosisLabel.text = movie["overview"] as? String ?? ""
         sypnosisLabel.sizeToFit()
-        
         ratingLabel.text = movie["release_date"] as? String ?? ""
+        ratingLabel.sizeToFit()
         
         // Get images [poster]
         let baseUrl = "https://image.tmdb.org/t/p/w185"
