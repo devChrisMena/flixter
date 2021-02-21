@@ -38,7 +38,6 @@ extension MoviesViewController {
     
     // Override prepare function
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         // Find the selected movie
         let indexPath = self.tableView.indexPathForSelectedRow
         let movie = moviesArray[indexPath!.row]

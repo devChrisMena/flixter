@@ -153,6 +153,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcA-Sw-Tsd">
+                                <rect key="frame" x="170" y="438" width="224" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f5C-70-XQT"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -161,13 +168,30 @@
                     <connections>
                         <outlet property="backDropView" destination="d5e-7w-9d7" id="eFU-CL-sli"/>
                         <outlet property="posterView" destination="Xzh-vO-3Bg" id="YK1-dH-vq7"/>
+                        <outlet property="ratingLabel" destination="GcA-Sw-Tsd" id="wAi-BE-8Sx"/>
                         <outlet property="sypnosisLabel" destination="Lx7-lu-S1f" id="KSf-bH-wgJ"/>
                         <outlet property="titleLabel" destination="ewh-dh-1wj" id="c7Q-9e-vOg"/>
+                        <segue destination="7Uh-QA-NJZ" kind="presentation" identifier="goToVideo" id="KnR-M2-fJ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Czh-ST-NLf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-701" y="1574"/>
+            <point key="canvasLocation" x="-701.44927536231887" y="1573.6607142857142"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="UnR-3R-PIh">
+            <objects>
+                <viewController id="7Uh-QA-NJZ" customClass="VideoViewController" customModule="flixter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v87-Np-Ktv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3hC-IO-cxD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KWZ-c7-rqj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-701" y="2267"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="v13-5h-byw">

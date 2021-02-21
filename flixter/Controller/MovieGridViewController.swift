@@ -81,9 +81,6 @@ extension MovieGridViewController {
         // Pass the selected movie to the details view controller
         let detailViewController = segue.destination as! MovieDetailsViewController
         detailViewController.movie = movie
-        
-        // Finish transition
-        //self.collectionView.deselectItem(at: indexPath!.item, animated: true)
     }
     
 }
