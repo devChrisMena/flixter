@@ -38,14 +38,17 @@ extension MoviesViewController {
     
     // Override prepare function
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToMovie" {
-            let movieVC = segue.destination as! GoToMovieViewController
-            let selectedRowIndex = self.tableView.indexPathForSelectedRow
-            // Get table view object
-            let movieInfo = moviesArray[selectedRowIndex!.row]
-            movieVC.movie = movieInfo
-        }
         
+        // Find the selected movie
+        let indexPath = self.tableView.indexPathForSelectedRow
+        let movie = moviesArray[indexPath!.row]
+        
+        // Pass the selected movie to the details view controller
+        let detailViewController = segue.destination as! MovieDetailsViewController
+        detailViewController.movie = movie
+        
+        // Finish transition
+        self.tableView.deselectRow(at: indexPath!, animated: true)
     }
     // Stubs
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
