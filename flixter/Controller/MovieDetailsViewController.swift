@@ -26,8 +26,8 @@ class MovieDetailsViewController: UIViewController {
         updateUI()
     }
     
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
-    {
+    // Image Tapped action
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         let tappedImage = tapGestureRecognizer.view as! UIImageView
         
         // Action
